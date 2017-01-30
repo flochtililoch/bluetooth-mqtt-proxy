@@ -1,0 +1,35 @@
+{
+  "name": "bluetooth-mqtt-proxy",
+  "version": "0.0.0",
+  "description": "Bluetooth MQTT Proxy",
+  "main": "index.js",
+  "bin": {
+    "bluetooth-mqtt-proxy": "./bin/bluetooth-mqtt-proxy.js"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "./node_modules/.bin/mocha *.test.js **/*.test.js",
+    "preversion": "npm run lint",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm version major && npm publish && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flochtililoch/bluetooth-mqtt-proxy.git"
+  },
+  "author": "flochtililoch",
+  "license": "ISC",
+  "dependencies": {
+    "bleno": "^0.4.1",
+    "debug": "^2.6.0",
+    "mqtt": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0"
+  }
+}

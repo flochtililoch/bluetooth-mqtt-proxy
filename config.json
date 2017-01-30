@@ -1,0 +1,11 @@
+{
+  "name": "BLE2MQTT",
+  "uuid": "70B3FB84-748F-4BA1-A162-28F19F068CD2",
+  "host": "mqtt://butterfly.local",
+  "characteristics": [
+    {
+      "uuid": "3DC74FD3-73C4-4252-89CA-ACF5197636DC",
+      "topic": "presence"
+    }
+  ]
+}
