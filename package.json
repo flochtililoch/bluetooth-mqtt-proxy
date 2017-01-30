@@ -1,6 +1,6 @@
 {
   "name": "bluetooth-mqtt-proxy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bluetooth MQTT Proxy",
   "main": "index.js",
   "bin": {
