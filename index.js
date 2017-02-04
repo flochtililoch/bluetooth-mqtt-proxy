@@ -1,17 +1,11 @@
-const bleno = require('bleno');
-const peripheral = require('./lib');
-const { resolvePath } = require('./lib/resolve');
-const debug = require('./lib/debug')('main');
+#! /usr/bin/env node --harmony
 
-module.exports = (args) => {
-  const config = Object.assign({}, require(resolvePath(args.config)), args);
-  bleno.on('accept', () => debug('Accepted'));
-  bleno.on('disconnect', () => debug('Disconnected'));
-  bleno.on('stateChange', (state) => {
-    debug('state change');
-    if (state === 'poweredOn') {
-      debug('powered on');
-      peripheral(config);
-    }
-  });
+const bluetoothMQTTProxy = require('./lib');
+const { processArgv } = require('./lib/cli');
+
+const argsMap = {
+  config: ['-c', '--config'],
 };
+const args = processArgv(argsMap);
+
+bluetoothMQTTProxy(args);
