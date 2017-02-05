@@ -4,7 +4,7 @@
   "description": "Bluetooth MQTT Proxy",
   "main": "index.js",
   "bin": {
-    "bluetooth-mqtt-proxy": "./index.js"
+    "bluetooth-mqtt-proxy": "./bin/bluetooth-mqtt-proxy.js"
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
