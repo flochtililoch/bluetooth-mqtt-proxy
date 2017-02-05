@@ -1,4 +1,4 @@
-#! /usr/bin/env node --harmony
+#! /usr/local/bin/node --harmony
 
 const bluetoothMQTTProxy = require('../');
 const { processArgv } = require('../lib/cli');
